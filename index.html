@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WorkToDo</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="WordToDo.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>WORDS TO-DO</h1>
+        <p>Nhập tên công việc mà bạn muốn thêm vào ô</p>
+        <p>Nhấp vào ô công việc đã hoàn thành để đánh dấu</p>
+        <p>Nhấp vào dấu "X" để xóa công việc đó</p>
+        <input type="text" placeholder="New item..." id="item" autocomplete="off">
+        <input type="text" name="mark" value="0" style="display:none";>
+        <button type="submit" onclick="Additem()">&#128394;</button>
+    </div>
+    <div id="arr" class="list container"></div>
+</body>
+</html>

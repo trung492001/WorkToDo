@@ -1,0 +1,14 @@
+.cell{
+    border-style:solid;
+    border-radius: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cell .button{
+    background: none;
+    border:none;
+    padding: 0;
+    padding-right: 10px;
+    width: fit-content;
+    text-align: right;
+}
