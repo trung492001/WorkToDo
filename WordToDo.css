@@ -12,3 +12,8 @@
     width: fit-content;
     text-align: right;
 }
+.cell .contentCell{
+    margin: 0;
+    padding-top:5px;
+    padding-bottom: 5px;
+}

@@ -5,6 +5,7 @@ function CreateWork(num, Job)
 {
     var newWork = document.createElement("div");
     newWork.setAttribute("class","row cell");
+    newWork.id = "Job" + num.toString();
         
     var Delete = document.createElement("button");
     Delete.value = num.toString();
@@ -15,7 +16,9 @@ function CreateWork(num, Job)
         
     var nameWork = document.createElement("p");
     nameWork.innerText = Job;
-    nameWork.setAttribute("class", "col")
+    nameWork.setAttribute("class", "col contentCell");
+    nameWork.setAttribute("id",num);
+    nameWork.setAttribute("onclick","Mark(this.id)");
         
     newWork.appendChild(nameWork);
     newWork.appendChild(Delete);
@@ -41,9 +44,21 @@ function ShowList(){
         document.getElementById("arr").appendChild(CreateWork(i,ListJob[i].name));
 }
 function DeleteItem(ID){
-    console.log(ID);
     ListJob.splice(ID,1);
     localStorage.setItem('UserList', JSON.stringify(ListJob));
     document.getElementById("arr").innerHTML = "";
     ShowList();
+}
+function Mark(ID){
+    if (ListJob[ID].mark === 0)
+    {
+        ListJob[ID].mark = 1;
+        document.getElementById("Job"+ID).style.backgroundColor = "tomato";
+    }
+    else 
+    {
+        ListJob[ID].mark = 0;
+        document.getElementById("Job"+ID).style.backgroundColor = "white";
+    }
+    localStorage.setItem('UserList', JSON.stringify(ListJob));    
 }
