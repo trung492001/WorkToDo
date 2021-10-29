@@ -1,19 +1,75 @@
+.list{
+    width: 70%;
+    margin-top:15px;
+    text-align: center;
+}
 .cell{
-    border-style:solid;
-    border-radius: 100px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-bottom: dotted;
 }
 .cell .button{
     background: none;
     border:none;
     padding: 0;
-    padding-right: 10px;
-    width: fit-content;
-    text-align: right;
+    width: 5%;
+    border-radius: 100%;
+    text-align: center;
+    transition: 150ms ease-in-out;
+}
+.button:hover{
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color:white;
+    background-color: #009F75;
 }
 .cell .contentCell{
     margin: 0;
     padding-top:5px;
     padding-bottom: 5px;
+    text-align: left;
+    font-family: 'Itim', cursive;
 }
+.formInput {
+	background-color: transparent;
+	border: 2px solid;
+	border-radius: 100px;
+	padding: 16px;
+	
+	text-indent: 8px;
+	color: var(--color-font-dark);
+	letter-spacing: 2px;
+}
+input{
+    border: none;
+    background-color:white;
+    font-size: 24px;
+}
+input:focus{
+    outline:none;
+}
+#item{
+    font-family: 'Source Code Pro', monospace;
+}
+.nothing{
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Itim', cursive;
+    border-bottom: dotted;
+}
+.submit{
+    text-align: center;
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    border-radius: 20%;
+}
+.submit:hover{
+    transform: scale(1.1);
+    color:red;
+    background-color: black;
+}
+
