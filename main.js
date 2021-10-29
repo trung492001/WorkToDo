@@ -12,14 +12,20 @@ function CreateWork(num, Job)
     Delete.type="button";
     Delete.setAttribute("onclick", "DeleteItem(this.value)");
     Delete.setAttribute("class", "button");
-    Delete.innerText = "X";
-        
+    Delete.innerHTML = "&#x274C;";
+
+    let markWork = document.createElement("p");
+    markWork.innerHTML = "&#9744;"
+    markWork.style.display = "contents";
+    markWork.setAttribute("id","mark"+num);
+
     let nameWork = document.createElement("p");
-    nameWork.innerText = Job;
+    nameWork.innerHTML = Job;
     nameWork.setAttribute("class", "col contentCell");
     nameWork.setAttribute("id",num);
     nameWork.setAttribute("onclick","Mark(this.id)");
-        
+    
+    newWork.appendChild(markWork);
     newWork.appendChild(nameWork);
     newWork.appendChild(Delete);
 
@@ -62,11 +68,13 @@ function Mark(ID){
     {
         ListJob[ID].mark = 1;
         document.getElementById(ID).style.textDecoration = "line-through";
+        document.getElementById("mark" + ID).innerHTML = "&#9989;";
     }
     else 
     {
         ListJob[ID].mark = 0;
         document.getElementById(ID).style.textDecoration = "none";
+        document.getElementById("mark" + ID).innerHTML = "&#9744;";
     }
     localStorage.setItem('UserList', JSON.stringify(ListJob));    
 }

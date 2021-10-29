@@ -21,8 +21,6 @@
 .button:hover{
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     transform: translateY(-0.25em);
-    color:white;
-    background-color: #009F75;
 }
 .cell .contentCell{
     margin: 0;
@@ -70,6 +68,7 @@ input:focus{
 .submit:hover{
     transform: scale(1.1);
     color:red;
-    background-color: black;
+    background: rgb(247,150,192);
+background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
 }
 
